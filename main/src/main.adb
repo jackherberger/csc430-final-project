@@ -28,17 +28,17 @@ procedure main is
    begin
       case exp is
          when NumC_Type =>
-            return 1; -- For now, return 0 for NumC_Type
+            return 1;
          when AppC_Type =>
-            return 1; -- For now, return 1 for AppC_Type
+            return 1;
          when IdC_Type =>
-            return 2; -- For now, return 2 for IdC_Type
+            return 2;
          when StrC_Type =>
-            return 3; -- For now, return 3 for StrC_Type
+            return 3;
          when LamC_Type =>
-            return 4; -- For now, return 4 for LamC_Type
+            return 4;
          when others =>
-            return -1; -- Handle any other expression types here
+            return -1;
       end case;
    end Interp;
 
