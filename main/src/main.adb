@@ -245,13 +245,8 @@ procedure Main is
 
    NumExpr : NumC := (n => 10);
    StrExpr : StrC := (s => To_Unbounded_String("string"));
-   -- StrExpr : ExprC := (Exp => StrC_Type, Str => (s => Ada.Strings.Unbounded.To_Unbounded_String("string")));
-   -- LamExpr : ExprC := (Exp => LamC_Type, Lam => (arg => Ada.Strings.Unbounded.To_Unbounded_String("lam arg"), bod => (NumC := (n => 42))));
-   -- AppExpr : ExprC := (Exp => AppC_Type, App => (func => Ada.Strings.Unbounded.To_Unbounded_String("app"), arg => 3));
-   -- IdExpr : ExprC := (Exp => IdC_Type, Id => (func => Ada.Strings.Unbounded.To_Unbounded_String("id")));
 
    begin
       Serialize(Interp(NumExpr, Top_Env));
-      Serialize(Interp(NumExpr, Top_Env), "Test 1 failed: NumC");
-      Serialize(Interp(StrExpr, Top_Env), "Test 1 failed: StrC");
+      Serialize(Interp(StrExpr, Top_Env));
 end Main;
